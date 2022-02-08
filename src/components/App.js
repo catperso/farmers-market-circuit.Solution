@@ -1,6 +1,7 @@
 import React from 'react';
 import Schedule from './Schedule';
 import Header from './Header';
+import ProduceList from './ProduceList';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           <Schedule />
         </div>
         <div class="col-6">
-
+          <ProduceList />
         </div>
       </div>
     </React.Fragment>
