@@ -3,7 +3,10 @@ import React from 'react';
 
 function Header(){
   return (
-    <h1>Welcome to the Farmer's Market Circuit</h1>
+    <React.Fragment>
+      <h1>Welcome to the Farmer's Market Circuit</h1>
+      <p><em>We are closed on Fridays!</em></p>
+    </React.Fragment>
   );
 }
 

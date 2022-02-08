@@ -48,12 +48,22 @@ class Schedule extends React.Component {
     };
   }
 
-  render(){
+  handleChange = (e) => {
+    this.setState({dayIndex: e.target.value});
+  }
 
-    // logic for the buttons for changing this.state.dayIndex
+  render(){
     return(
       <React.Fragment>
-        {/* buttons for changing the day */}
+        <select value={this.state.dayIndex} onChange={this.handleChange} class="btn btn-info dropdown-toggle">
+          <option value='0'>Sunday</option>
+          <option value='1'>Monday</option>
+          <option value='2'>Tuesday</option>
+          <option value='3'>Wednesday</option>
+          <option value='4'>Thursday</option>
+          <option value='0' disabled >Friday</option>
+          <option value='5'>Saturday</option>
+        </select>
         <h2>Day: {marketSchedule[this.state.dayIndex].day}</h2>
         <h3>Location: <em>{marketSchedule[this.state.dayIndex].location}</em></h3>
         <p>Hours: {marketSchedule[this.state.dayIndex].hours}</p>
